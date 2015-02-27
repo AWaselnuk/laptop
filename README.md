@@ -7,27 +7,7 @@ It can be run multiple times on the same machine safely.
 It installs, upgrades, or skips packages
 based on what is already installed on the machine.
 
-Requirements
-------------
-
-We support:
-
-* [OS X Mavericks (10.9)](https://itunes.apple.com/us/app/os-x-mavericks/id675248567)
-* [OS X Yosemite (10.10)](https://www.apple.com/osx/)
-
-Older versions may work but aren't regularly tested. Bug reports for older
-versions are welcome.
-
-Install
--------
-
-Download, review, then execute the script:
-
-```sh
-curl --remote-name https://raw.githubusercontent.com/thoughtbot/laptop/master/mac
-less mac
-sh mac 2>&1 | tee ~/laptop.log
-```
+This is a personal fork of the script written by [Thoughtbot](https://github.com/thoughtbot/laptop)
 
 Debugging
 ---------
@@ -82,10 +62,10 @@ What it sets up
 
 It should take less than 15 minutes to install (depends on your machine).
 
-Customize in `~/.laptop.local`
+Customize in `custom`
 ------------------------------
 
-Your `~/.laptop.local` is run at the end of the Laptop script.
+Your `custom` is run at the end of the Laptop script.
 Put your customizations there.
 For example:
 
@@ -111,7 +91,7 @@ See the `mac` script for examples.
 Laptop functions such as `fancy_echo`,
 `brew_install_or_upgrade`, and
 `gem_install_or_update`
-can be used in your `~/.laptop.local`.
+can be used in your `custom`.
 
 See the [wiki](https://github.com/thoughtbot/laptop/wiki)
 for more customization examples.
@@ -125,20 +105,6 @@ Laptop is maintained and funded by [thoughtbot, inc](http://thoughtbot.com/commu
 The names and logos for thoughtbot are trademarks of thoughtbot, inc.
 
 Thank you, [contributors](https://github.com/thoughtbot/laptop/graphs/contributors)!
-
-Contributing
-------------
-
-Edit the `mac` file.
-Document in the `README.md` file.
-Follow shell style guidelines by using [ShellCheck] and [Syntastic].
-
-```sh
-brew install shellcheck
-```
-
-[ShellCheck]: http://www.shellcheck.net/about.html
-[Syntastic]: https://github.com/scrooloose/syntastic
 
 License
 -------
